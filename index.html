@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your go to technical documentation page on CSS (Cascading Style Sheets)." />
+    <title>CSS Documentation_</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1><a href="./index.html" class="h1__link"></a><span class="cursor">_</span></h1>
+      <nav id="navbar">
+        <ul class="nav__ul">
+          <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+          <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+          <li><a href="#HTML_and_CSS" class="nav-link">HTML and CSS</a></li>
+          <li><a href="#Margin" class="nav-link">Margin</a></li>
+          <li><a href="#Padding" class="nav-link">Padding</a></li>
+          <li><a href="#Custom_Properties_(Variables)" class="nav-link">Custom Properties (Variables)</a></li>
+          <li><a href="#Flexbox_Layout" class="nav-link">Flexbox Layout</a></li>
+          <li><a href="#Grid_Layout" class="nav-link">Grid Layout</a></li>
+          <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Section -->
+    <main id="main-doc">
+      <!-- Introduction Section -->
+      <section id="Introduction" class="main-section">
+        <header class="section__header">Introduction</header>
+        <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in HTML or XML. It is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS allows you to control the layout, colors, fonts, and overall visual appearance of web pages.</p>
+        <p>CSS contains a wide range of properties for styling elements, such as margin, padding, font-size, and color, and it supports various selectors and combinators to target specific elements in a document. The flexibility and power of CSS can be extended in different contexts, including:</p>
+        <ul class="main__ul">
+          <li><span class="li__title">Responsive Web Design:</span> CSS enables the creation of responsive web designs by using media queries and flexible grid layouts. This allows web pages to adjust their layout and appearance depending on the screen size and device used, providing an optimal viewing experience.</li>
+          <li><span class="li__title">Animation and Transitions:</span> CSS allows for the creation of animations and transitions to enhance user experience. With properties like <code class="inline-code">animation</code>, <code class="inline-code">transition</code>, and <code class="inline-code">keyframes</code>, developers can create dynamic visual effects that respond to user interactions, such as hover effects, fading elements, and animated loading indicators.</li>
+        </ul>
+      </section>
+      <!-- Previous Knowledge Section -->
+      <section id="What_you_should_already_know" class="main-section">
+        <header class="section__header">What you should already know</header>
+        <p>This guide assumes you have the following basic background:</p>
+        <ul class="main__ul">
+          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>Some familiarity with basic design concepts. If you are new to web design, consider exploring the introductory resources linked on the main page about HTML and CSS.</li>
+        </ul>
+      </section>
+      <!-- HTML and CSS Section -->
+      <section id="HTML_and_CSS" class="main-section">
+        <header class="section__header">HTML and CSS</header>
+        <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are two fundamental technologies for creating web pages. While they work closely together, they serve different purposes and have distinct characteristics.</p>
+        <p>HTML provides the structure and content of a web page, using a set of markup elements to define headings, paragraphs, links, images, and other content. HTML uses a tag-based syntax where elements are enclosed in angle brackets, such as <code class="inline-code">h1</code>, <code class="inline-code">p</code>, and <code class="inline-code">img</code>. This markup creates the document's structure and organizes its content into a hierarchy.</p>
+        <p>In contrast, CSS is used for styling and layout. It applies visual and design rules to HTML elements, controlling aspects like color, font, spacing, and positioning. CSS employs selectors to target HTML elements and apply styles through a set of properties, such as <code class="inline-code">color</code>, <code class="inline-code">font-size</code>, and <code class="inline-code">margin</code>. Unlike HTML, which defines content, CSS enhances the presentation and user experience.</p>
+        <p>While HTML is concerned with the content and structure of a page, CSS deals exclusively with how that content is displayed. HTML elements can be styled with CSS by linking external style sheets or embedding styles within the HTML document. CSS provides flexibility with its box model, layout techniques, and responsive design capabilities, enabling developers to create visually appealing and adaptable web pages.</p>
+        <p>HTML and CSS complement each other by separating content from presentation. HTML provides the foundational structure, while CSS adds the styling and layout, allowing for a clear distinction between a web page's content and its visual design.</p>
+      </section>
+      <!--Margin Section -->
+      <section id="Margin" class="main-section">
+        <header class="section__header">Margin</header>
+        <p>To get started with understanding margins in CSS, let’s create a simple example. This will help you see how margins affect the spacing around elements.</p>
+        <p>In your CSS file, write the following code:</p>
+        <pre class="code-block">
+          <code>
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: #4E4E4E;
+    margin: 20px;
+  }
+          </code>
+        </pre>
+        <p>This code defines a <code class="inline-code">.box</code> class with a <code class="inline-code">width</code> of <code class="inline-code">200px</code>, a <code class="inline-code">height</code> of <code class="inline-code">100px</code>, a <code class="inline-code">background-color</code>, and a <code class="inline-code">margin</code> of <code class="inline-code">20px</code> on all sides. The margin creates space around the <code class="inline-code">.box</code> element, pushing it away from other elements and the edges of its container.</p>
+        <p>Apply the .box class to an HTML element and view the result in your browser to see the margin effect:</p>
+        <pre class="code-block">
+          <code>
+  &lt;div class="box"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+      <!-- Padding Section -->
+      <section id="Padding" class="main-section">
+        <header class="section__header">Padding</header>
+        <p>To get started with understanding padding in CSS, let’s create a simple example. This will help you see how padding affects the space within elements.</p>
+        <p>In your CSS file, write the following code:</p>
+        <pre class="code-block">
+          <code>
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: #4E4E4E;
+    padding: 20px;
+  }
+          </code>
+        </pre>
+        <p>This code defines a <code class="inline-code">.box</code> class with a <code class="inline-code">width</code> of <code class="inline-code">200px</code>, a <code class="inline-code">height</code> of <code class="inline-code">100px</code>, a <code class="inline-code">background-color</code>, and <code class="inline-code">padding</code> of <code class="inline-code">20px</code> on all sides. The padding creates space inside the <code class="inline-code">.box</code> element, between its border and its content. This means the content inside the box will have additional space around it, pushing the content inward from the edges of the box.</p>
+        <p>Apply the <code class="inline-code">.box</code> class to an HTML element and view the result in your browser to see the padding effect:</p>
+        <pre class="code-block">
+          <code>
+  &lt;div class="box"&gt;Content inside the box&lt;/div&gt;
+          </code>
+        </pre>
+        <p>Select the CSS and HTML in your editor and refresh your browser to observe how the padding impacts the layout and the spacing within the element!</p>
+      </section>
+      <!-- Custom Properties (Variables) Section -->
+      <section id="Custom_Properties_(Variables)" class="main-section">
+        <header class="section__header">Custom Properties (Variables)</header>
+        <p>To get started with understanding CSS custom properties (variables), let’s create a simple example. This will help you see how variables can simplify your styling and make it easier to manage colors, sizes, and other values.</p>
+        <p>In your CSS file, write the following code:</p>
+        <pre class="code-block">
+          <code>
+  :root {
+    --primary-color: #3498db;
+    --padding-size: 20px;
+  }
+
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: var(--primary-color);
+    padding: var(--padding-size);
+  }
+          </code>
+        </pre>
+        <p>This code defines two CSS custom properties (variables) in the <code class="inline-code">:root</code> pseudo-class: <code class="inline-code">--primary-color</code> and <code class="inline-code">--padding-size</code>. The <code class="inline-code">.box</code> class then uses these variables to set the <code class="inline-code">background-color</code> and <code class="inline-code">padding</code>. Using variables allows you to easily change the values in one place, which automatically updates all instances where the variable is used.</p>
+        <p>Apply the <code class="inline-code">.box</code> class to an HTML element and view the result in your browser to see the effect of the custom properties:</p>
+        <pre class="code-block">
+          <code>
+  &lt;div class="box"&gt;Content inside the box&lt;/div&gt;
+          </code>
+        </pre>
+        <p>Select the CSS and HTML in your editor and refresh your browser to observe how the custom properties impact the styling of the element. Try changing the values of the variables to see how it updates the design throughout your stylesheet!</p>
+      </section>
+      <!-- Flexbox Layout Section -->
+      <section id="Flexbox_Layout" class="main-section">
+        <header class="section__header">Flexbox Layout</header>
+        <p>To get started with understanding Flexbox in CSS, let’s create a simple example. This will help you see how Flexbox enables efficient layout design by distributing space and aligning items within a container.</p>
+        <p>In your CSS file, write the following code:</p>
+        <p>Apply the <code class="inline-code">.box</code> class to an HTML element and view the result in your browser to see the effect of the custom properties:</p>
+        <pre class="code-block">
+          <code>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #4E4E4E;
+  }
+
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 10px;
+  }
+          </code>
+        </pre>
+        <p>This code defines a <code class="inline-code">.container</code> class that uses Flexbox by setting <code class="inline-code">display: flex;</code>. The <code class="inline-code">justify-content: center;</code> property centers the items horizontally within the container, and <code class="inline-code">align-items: center;</code> centers the items vertically. The <code class="inline-code">.item</code> class represents the child elements within the container, which are styled with a <code class="inline-code">width</code>, <code class="inline-code">height</code>, and <code class="inline-code">background-color</code>.</p>
+        <p>Apply the <code class="inline-code">.container</code> class to a parent element and the <code class="inline-code">.item</code> class to child elements to see the Flexbox layout in action:</p>
+        <p>Select the CSS and HTML in your editor and refresh your browser to observe how Flexbox manages the alignment and spacing of the items within the container. Experiment with different values for <code class="inline-code">justify-content</code> and <code class="inline-code">align-items</code> to see how they affect the layout!</p>
+      </section>
+      <!-- Grid Layout Section -->
+      <section id="Grid_Layout" class="main-section">
+        <header class="section__header">Grid Layout</header>
+        <p>To get started with understanding CSS Grid, let’s create a simple example. This will help you see how Grid enables precise layout design by dividing a container into rows and columns.</p>
+        <p>In your CSS file, write the following code:</p>
+        <pre class="code-block">
+          <code>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 200px;
+    background-color: #4E4E4E;
+  }
+
+  .item {
+    background-color: #3498db;
+    padding: 20px;
+  }
+          </code>
+        </pre>
+        <p>This code defines a <code class="inline-code">.container</code> class that uses CSS Grid by setting <code class="inline-code">display: grid;</code>. The <code class="inline-code">grid-template-columns: repeat(3, 1fr);</code> property creates a grid with three equal-width columns. The <code class="inline-code">grid-gap: 10px;</code> property adds space between the grid items. The <code class="inline-code">.item</code> class represents the child elements within the grid container, styled with a <code class="inline-code">background-color</code> and <code class="inline-code">padding</code>.</p>
+        <p>Apply the <code class="inline-code">.container</code> class to a parent element and the <code class="inline-code">.item</code> class to child elements to see the Grid layout in action:</p>
+        <pre class="code-block">
+          <code>
+  &lt;div class="container"&gt;
+    &lt;div class="item"&gt;1&lt;/div&gt;
+    &lt;div class="item"&gt;2&lt;/div&gt;
+    &lt;div class="item"&gt;3&lt;/div&gt;
+    &lt;div class="item"&gt;4&lt;/div&gt;
+    &lt;div class="item"&gt;5&lt;/div&gt;
+    &lt;div class="item"&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+        <p>Select the CSS and HTML in your editor and refresh your browser to observe how CSS Grid arranges the items into a grid layout. Experiment with different values for <code class="inline-code">grid-template-columns</code> and <code class="inline-code">grid-gap</code> to see how they affect the grid structure!</p>
+      </section>
+      <!-- Reference Section -->
+      <section id="Reference" class="main-section">
+        <header class="section__header">Reference</header>
+        <ul class="main__ul">
+          <li><span class="li__title">CSS Specification: Grid Layout Module</span><br>
+            <strong>Description:</strong> The official specification for CSS Grid Layout, detailing the properties and functionalities of the grid system.<br>
+            <strong>URL:</strong> <a href="https://www.w3.org/TR/css-grid-1/" target="_blank" rel="noopener noreferrer">CSS Grid Layout Specification</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">CSS Tricks: A Complete Guide to Grid</span><br>
+            <strong>Description:</strong> An extensive guide by CSS Tricks providing tutorials, examples, and tips on using CSS Grid effectively.<br>
+            <strong>URL:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" target="_blank" rel="noopener noreferrer">Using CSS Grid Layout</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">MDN Web Docs: Using CSS Grid Layout</span><br>
+            <strong>Description:</strong> Mozilla Developer Network’s documentation on CSS Grid Layout, including tutorials, examples, and reference materials.<br>
+            <strong>URL:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" target="_blank" rel="noopener noreferrer">Using CSS Grid Layout</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">W3Schools: CSS Grid Layout</span><br>
+            <strong>Description:</strong> W3Schools offers a comprehensive tutorial on CSS Grid Layout with interactive examples and exercises.<br>
+            <strong>URL:</strong> <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank" rel="noopener noreferrer">CSS Grid Layout Tutorial</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">Google Fonts: Font Reference</span><br>
+            <strong>Description:</strong> A collection of free and open-source web fonts that can be used in web design, including documentation on font families and usage.<br>
+            <strong>URL:</strong> <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">Flexbox Froggy: A Game for Learning CSS Flexbox</span><br>
+            <strong>Description:</strong> An interactive game designed to help you learn and practice CSS Flexbox.<br>
+            <strong>URL:</strong> <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener noreferrer">Flexbox Froggy</a>
+          </li>
+        </ul>
+        <ul class="main__ul">
+          <li><span class="li__title">CSS Grid Garden: A Game for Learning CSS Grid</span><br>
+            <strong>Description:</strong> An interactive game that teaches you CSS Grid Layout concepts through gardening challenges.<br>
+            <strong>URL:</strong> <a href="https://cssgridgarden.com/" target="_blank" rel="noopener noreferrer">CSS Grid Garden</a>
+          </li>
+        </ul>
+      </section>
+      <!-- Footer Section -->
+      <footer>
+        <p>*Note: More content will be coming soon!</p>
+      </footer>
+    </main>
+    <script>
+      const heading = document.querySelector(".h1__link");
+      const textToDisplay = "CSS Documentation";
+      let count = 0;
+      const typingAnimation = setInterval(function() {
+        if (count < textToDisplay.length) {
+          heading.textContent += textToDisplay[count];
+          count++;
+        } else {
+          clearInterval(typingAnimation);
+        }
+      }, 125)
+    </script>
+  </body>
+</html>
