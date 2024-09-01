@@ -1,0 +1,266 @@
+/* Custom Properties */
+
+:root {
+    --fnt-heading: 'Source Code Pro';
+    --fnt-text: 'Lato';
+    --fnt-size-nav: 1.25rem;
+    --fnt-size-sub-headings: 2rem;
+    --fnt-size-text: 1.15rem;
+    --bold: 600;
+    --white: #FFF;
+    --black: #1B1B1B;
+    --grey: #3D3D3D;
+    --green: #00D0AA;
+    --yellow: #F0E498;
+    --red: #FF6D91;
+  }
+  
+  /* Selection */
+  
+  ::selection {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  /* Bullet Points */
+  
+  .main__ul li::marker {
+    color: var(--yellow);
+  }
+  
+  /* Animations */
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  /* General Styles */
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: var(--black);
+    font-family: var(--fnt-text);
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "h h h . m m m m m m m .";
+    align-items: baseline;
+  }
+  
+  h1, .section__header {
+    font-family: var(--fnt-heading);
+    font-weight: var(--bold);
+  }
+  
+  p {
+    font-size: var(--fnt-size-text);
+    line-height: 1.475em;
+  }
+  
+  .inline-code, code {
+    background-color: var(--grey);
+    font-family: var(--fnt-heading);
+  }
+  
+  .inline-code {
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--yellow);
+  }
+  
+  .code-block {
+    color: #abb2bf;
+    overflow-x: auto;
+  }
+  
+  .code-block code {
+    border-radius: 5px;
+    display: block;
+    white-space: pre;
+  }
+  
+  /* Individual Styles */
+  
+  h1 {
+    margin-bottom: 1em;
+  }
+  
+  .section__header {
+      font-size: var(--fnt-size-sub-headings);
+  }
+  
+  .main__ul {
+    padding-left: 1em;
+  }
+  
+  .main__ul li {
+    font-size: var(--fnt-size-text);
+    line-height: 1.475em;
+    text-indent: 0;
+    padding-bottom: 1em;
+  }
+  
+  .li__title {
+    font-weight: var(--bold);
+    color: var(--red);
+  }
+  
+  /* Header Section */
+  
+  header:not(.section__header) {
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    border-right: 3px solid var(--green);
+    height: 100vh;
+    grid-area: h;
+    overflow: scroll;
+  }
+  
+  h1 {
+    height: 1em; 
+  }
+  
+  .cursor {
+    font-weight: 900;
+    animation: blink 1s step-end infinite;
+    animation-delay: 2.1s;
+  }
+  
+  h1, ul li {
+    text-indent: 2rem;
+  }
+  
+  .nav__ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-link, .h1__link {
+    font-family: var(--fnt-heading);
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .nav-link {
+    font-size: var(--fnt-size-nav);
+  }
+  
+  .nav__ul li {
+    padding: 1.25em 0;
+    border-bottom: 1px solid var(--grey);
+  }
+  
+  /* Main Section */
+  
+  main {
+    grid-area: m;
+  }
+  
+  .main-section {
+    margin-bottom: 3em;
+  }
+  
+  .section__header {
+    margin-bottom: 1em;
+  }
+  
+  /* Reference Section */
+  
+  li strong, li a {
+    margin-left: 1em;
+  }
+  
+  li a {
+    color: var(--yellow);
+  }
+  
+  /* Footer Section */
+  
+  footer p {
+    margin-top: 4em;
+    font-size: 1rem;
+    text-align: center;
+    color: #565656;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 1640px) {
+    body {
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: auto;
+      grid-template-areas: 
+      "h h h h h h h h h h h h"
+      ". m m m m m m m m m m .";
+      align-items: center;
+    }
+  
+    header:not(.section__header) {
+      position: static;
+      border: none;
+      height: auto;
+      text-align: center;
+      padding: 0;
+    }
+
+    h1, ul li {
+        text-indent: 0;
+    }
+
+    h1, .h1__link, .section__header {
+        color: var(--green);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fnt-size-nav: 1.1rem;
+        --fnt-size-text: 1.1rem;
+    }
+
+    .nav__ul li {
+        padding: 0.75em 0;
+    }
+    
+    .section__header {
+    font-size: 1.5rem;
+    }
+
+    footer p {
+    font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 390px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
