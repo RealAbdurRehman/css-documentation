@@ -90,13 +90,13 @@
   
   .code-block {
     color: #abb2bf;
-    overflow-x: auto;
   }
   
   .code-block code {
     border-radius: 5px;
     display: block;
     white-space: pre;
+    overflow-x: scroll;
   }
   
   /* Individual Styles */
